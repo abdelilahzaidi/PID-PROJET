@@ -24,10 +24,6 @@ const db = require("./models");
 db.sequelize.sync();
 
 // Pour tester, on fait une methode get
-app.get('/', (req, res) => {
-    res.send({ message: 'Salam mes chers developpeurs' })
-
-})
 
 require("./routes/equipment.routes")(app);
 

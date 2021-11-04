@@ -14,7 +14,6 @@ exports.create = (req, res) => {
   
     // Create a equipment
     const equipment = {
-      id_equipment: id_equipment,
       name: req.body.name,
       price: parseInt(req.body.price),
       isUsed: req.body.isUsed ? req.body.isUsed : false
@@ -28,7 +27,7 @@ exports.create = (req, res) => {
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while creating the equipment."
+            err.message || ``
         });
       });
   };
