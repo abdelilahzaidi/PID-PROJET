@@ -1,15 +1,11 @@
 const path = require('path')
     //Importation de express
 const express = require('express');
-
 const bodyParser = require('body-parser');
-const cors = require("cors");
 // app recoit expressions
 const app = express();
 
-var corsOptions = {
-    origin: "http://localhost:8081"
-  };
+
 
 
 require('dotenv').config();
@@ -24,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'assets')))
 
 app.use('/', registerRoute)
 
-const db = require("./app/models");
+const db = require("./models");
 db.sequelize.sync();
 
 // Pour tester, on fait une methode get
@@ -33,7 +29,7 @@ app.get('/', (req, res) => {
 
 })
 
-require("./app/routes/tutorial.routes")(app);
+require("./routes/equipment.routes")(app);
 
 
 

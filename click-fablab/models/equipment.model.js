@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
       name: {
         type: Sequelize.STRING
       },
-      tarif: {
+      price: {
         type: Sequelize.FLOAT
       },
       isUsed: {
