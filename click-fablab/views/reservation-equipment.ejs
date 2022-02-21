@@ -1,0 +1,35 @@
+<%- include('header') -%>
+    <%- include('includes/navigation_logout.ejs') %>
+        <h2 class="title-reservation">
+            Formulaire de réservation d'une machine
+        </h2>
+
+        <div class="formulaire-reservation-equipement">
+            <form method="post" action="/api/user/reservation-equipment">
+                <div class="form-group">
+                    <label class="col-md-8 control-label" for="Machine">Nom du modèle de la machine : </label>
+                    <div class="col-md-4">
+                        <select onchange="changePrice(this)" id="machine" class="form-control">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 col-form-label" for="textinput">Prix en euro par minutes :</label>
+                    <div class="col-md-4">
+                        <input id="price" name="price" type="text" class="form-control input-md" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 col-form-label" for="textinput">Durée de l'utilisation en minute :</label>
+                    <div class="col-md-4">
+                        <input id="price" name="duration" type="text" class="form-control input-md" aria-required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary id" name="id">Réserver la machine</button>
+            </form>
+            <a href="/api/user/user-panel"><button type="button" class="btn btn-secondary retour">Retour</button></a>
+        </div>
+
+        <script src="/js/user.js"></script>
+        <%- include('includes/end.ejs') %>

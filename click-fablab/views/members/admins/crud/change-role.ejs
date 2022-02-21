@@ -1,0 +1,32 @@
+<%- include('../../../includes/head.ejs') %>
+<%- include('../../../includes/navigation_logout.ejs') %>
+<div class="formulaire-equipement">
+    <form method="POST" action="/api/user/change-role">
+
+        <div class="form-group row">
+            <label class="col-4 col-form-label" for="Machine">Utilisateur : </label>
+            <div class="col-5">
+                <select name="user" id="user" class="form-control">
+        <option value=""></option>
+      </select>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-4 col-form-label" for="Machine">Rôle : </label>
+                <div class="col-5">
+                    <select name="role" id="role" class="form-control">
+            <option value=""></option>
+          </select>
+                </div>
+        </div>
+            <div class="form-group row">
+                <div class="offset-4 col-8">
+                    <button type="submit" class="btn btn-primary id" >Envoyer</button>
+                </div>
+            </div>
+
+    </form>
+    <a href="/api/user/admin"><button type="button" class="btn btn-secondary retour">Retour</button></a>
+</div>
+<script src="/js/change-role.js"></script>
+    <%- include('../../../includes/end.ejs') %>

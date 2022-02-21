@@ -1,0 +1,16 @@
+<%- include('includes/head.ejs') %>
+    <%- include('includes/navigation_logout.ejs') %>
+
+        <div class="container mt-3">
+            <table class="tab-equipment table table-dark table-hover">
+
+            </table>
+            <a href="/api/equipment/create"><button class="btn btn-primary title-reservation">Ajouter un équipement</button></a>
+            <a href="/api/equipment/modify-equipment"><button class="btn btn-primary title-reservation">Modifier un équipement</button></a>
+            <a href="/api/equipment/delete-equipment"><button class="btn btn-danger title-reservation">Supprimer un équipement</button></a>
+
+        </div>
+
+
+        <script src="/js/tab-equipment.js"></script>
+        <%- include('includes/end.ejs') %>

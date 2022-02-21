@@ -1,0 +1,41 @@
+<%- include('../../../includes/head.ejs') %>
+    <div class="formulaire-equipement utilisation">
+        <form method="POST" action="/api/use/create-use">
+
+            <div class="form-group">
+                <label class="col-md-8 col-form-label" for="Machine">Nom du modèle de la machine :</label>
+                <div class="col-md-4">
+                    <select name="idEquipment" onchange="changePrice(this)" id="machine" class="form-control">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-8 col-form-label" for="User">Email de l'utilisateur :</label>
+                    <div class="col-md-4">
+                        <select name="idUser" id="user" class="form-control">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 col-form-label" for="textinput">Prix en euro par minutes :</label>
+                    <div class="col-md-4">
+                        <input id="price" name="price" type="text" class="form-control input-md" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 col-form-label" for="textinput">Durée de l'utilisation en minute :</label>
+                    <div class="col-md-4">
+                        <input id="price" name="duration" type="text" class="form-control input-md" aria-required>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-4 col-8">
+                            <button name="submit" type="submit" class="btn btn-primary">Envoyer</button>
+                        </div>
+                    </div>
+
+        </form>
+        <a href="/api/user/admin"><button type="button" class="btn btn-secondary retour">Retour</button></a>
+    </div>
+    <script src="/js/create-use.js"></script>
+    <%- include('../../../includes//end.ejs') %>

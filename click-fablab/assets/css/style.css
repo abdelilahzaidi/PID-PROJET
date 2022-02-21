@@ -7,63 +7,91 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: 'Roboto', sans-serif;
     background-color: #445964;
-    color: #ecf3f7;
+    color: #000000;
+    position: relative;
 }
 
-
-/*--- Navabar ---*/
-
-ul {
-    list-style-type: none;
+.formulaire-equipement{
+    margin-left: 45rem;
+    margin-top: 15rem;
+    display: inline-block;
+    border: 5px inset #2a3c4b;
+    padding: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: var(--primary-color);
+.formulaire-equipement button{
+    margin-top: 10px;
 }
 
-a:hover {
-    color: var(--secondary-color);
+.formulaire-equipement .retour {
+    margin-left: 9rem;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 3.5rem;
-    background-color: var(--bg-color);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+.formulaire-equipement label {
+    color: white;
 }
 
-nav h1 {
-    color: var(--primary-color);
+.utilisation{
+    width: 50%;
+    margin-left: 30rem;
 }
 
-nav a {
-    color: var(--primary-color);
-    transition: var(--transition);
+.utilisation button{
+    margin-top: 15px;
+    margin-left: -11rem;
 }
 
-nav a:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+.formulaire-utilisation{
+    margin-left: 45rem;
+    margin-top: 15rem;
+    display: inline-block;
+    border: 5px inset #2a3c4b;
+    padding: 10px;
+    width: 20%;
+    z-index: 9999;
+    position: absolute;
 }
 
-nav ul {
-    display: flex;
-    gap: 1.9rem;
+.formulaire-utilisation label {
+    color: white;
 }
 
-nav ul li {
-    font-weight: var(--bold-font);
+.modify-user .form-group{
+
+    margin-top: 1rem;
 }
 
-.burger-menu {
-    background-color: #657177;
+.modify-user{
+    width: 30%;
+}
+
+.my-uses{
+    margin: 5rem;
+}
+
+.my-uses table thead th{
+    color: white;
+    padding-left: 2rem;
+}
+
+.my-uses table td{
+    padding-left: 2rem;
+}
+
+.my-uses button{
+    margin: 2rem 2rem;
+}
+
+.formulaire-reservation-equipement{
+    margin: 3rem;
+}
+
+.formulaire-reservation-equipement label{
+    color: white;
+}
+
+.formulaire-reservation-equipement button{
+    margin-top: 2rem;
 }

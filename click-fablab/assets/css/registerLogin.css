@@ -1,0 +1,33 @@
+h4 {
+    text-align: center;
+}
+
+.container {
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    /* postulat de départ */
+    top: 25%;
+    left: 50%;
+    /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
+    /* décalage de 50% de sa propre taille */
+}
+
+.btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.btn-register {
+    display: inline-block;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.info {
+    color: grey;
+}

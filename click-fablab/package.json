@@ -4,17 +4,33 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "DEBUG=fablab:* NODE_ENV=development nodemon ./bin/www",
+        "init_db": "DEBUG=fablab:* node ./models/create_database.js && DEBUG=fablab:* && node ./models/create_tables.js && DEBUG=fablab:* node ./models/import_samples.js"
     },
     "keywords": [],
     "author": "Abdelilah Zaidi",
     "license": "ISC",
     "dependencies": {
+        "argon2": "^0.28.3",
+        "atob": "^2.1.2",
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
         "dotenv": "^10.0.0",
+        "ejs-lint": "^1.2.1",
         "express": "^4.17.1",
+        "express-validator": "^6.13.0",
+        "jsonwebtoken": "^8.5.1",
         "mysql2": "^2.3.2",
         "nodemon": "^2.0.14",
         "sequelize": "^6.8.0"
+    },
+    "devDependencies": {
+        "cookie-parser": "^1.4.5",
+        "ejs": "^3.1.6",
+        "http-errors": "^1.8.0",
+        "morgan": "^1.10.0",
+        "path": "^0.12.7"
     }
 }

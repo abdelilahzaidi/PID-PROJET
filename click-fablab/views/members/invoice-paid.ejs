@@ -1,0 +1,32 @@
+<%- include('../includes/head.ejs') %>
+    <%- include('../includes/navigation_logout.ejs') %>
+        <div class="container mt-3">
+            <table class="tab-invoice table table-dark table-hover">
+
+            </table>
+        </div>
+        <div class="formulaire-utilisation">
+            <form method="POST" action="/api/invoice/paid-invoice">
+        
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="Machine">Facture payer : </label>
+                    <div class="col-8">
+                        <select id="invoice" class="form-control" name="id">
+                            <option value=""></option>
+                        </select>
+                    </div>
+        
+                </div>
+                    <div class="form-group row">
+                        <div class="offset-4 col-8">
+                            <button type="submit" class="btn btn-primary id" onlick='return btnClick();'>Envoyer</button>
+                        </div>
+                    </div>
+        
+            </form>
+            <a href="/api/user/user-panel"><button type="button" class="btn btn-secondary retour">Retour</button></a>
+        </div>
+        <script src="/js/paid-invoice.js"></script>
+
+
+        <%- include('../includes/end.ejs') %>

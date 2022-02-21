@@ -1,0 +1,18 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/navigation_logout.ejs') %>
+<div class="container mt-3">
+    <form action="/api/invoice/details-invoice" method="post">
+    <table class="tab-invoice table table-dark table-hover">
+
+    </table>
+    </form>
+    <a href="/api/invoice/create"><button class="btn btn-primary title-reservation">Ajouter une facture</button></a>
+    <% if(roleAccountant == "Accountant"){ %>
+        <a href="/api/invoice/delete-invoice"><button class="btn btn-danger title-reservation">Supprimer une facture</button></a>
+        <% } else{ %>
+            <% } %>
+    <a href="/api/invoice/paid-invoice"><button class="btn btn-primary title-reservation">Paiement facture</button></a>
+
+</div>
+<script src="/js/tab-invoice.js"></script>
+<%- include('includes//end.ejs') %>

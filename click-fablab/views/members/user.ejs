@@ -1,0 +1,19 @@
+<%- include('../includes/head.ejs') %>
+    <%- include('../includes/navigation_logout.ejs') %>
+
+        <div class="container mt-3">
+            <h1>Equipement</h1>
+            <table class="tab-equipment table table-dark table-hover">
+
+            </table>
+            <a href="/api/user/reservation-equipment"><button class="btn btn-primary title-reservation">Réserver un équipement</button></a>
+            <a href="/api/user/invoice"><button class="btn btn-primary title-reservation">Mes factures</button></a>
+            <a href="/api/user/modify-user"><button class="btn btn-primary title-reservation">Changer mes données personnelles</button></a>
+            <a href="/api/user/my-uses"><button class="btn btn-primary title-reservation">Tableau de mes utilisations</button></a>
+                    <a href="/api/user/admin"><button class="btn btn-primary title-reservation">Panel Admin</button></a>
+                    <a href="/api/invoice/"><button class="btn btn-danger title-reservation">Panel Comptable</button></a>
+
+        </div>
+        <script src="/js/tab-equipment.js"></script>
+
+        <%- include('../includes/end.ejs') %>

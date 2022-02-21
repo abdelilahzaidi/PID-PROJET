@@ -1,0 +1,13 @@
+<%- include('../../../includes/head.ejs') %>
+<%- include('../../../includes/navigation_logout.ejs') %>
+<div class="container mt-3">
+    <form action="/api/user/tab-user" method="post">
+    <table class="tab-user table table-dark table-hover">
+
+    </table>
+    </form>
+    <a href="/api/user/change-role"><button class="btn btn-primary title-reservation">Changer le rôle d'un utilisateur</button></a>
+
+</div>
+<script src="/js/tab-user-role.js"></script>
+<%- include('../../../includes//end.ejs') %>

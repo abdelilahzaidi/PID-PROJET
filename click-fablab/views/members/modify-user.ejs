@@ -1,0 +1,47 @@
+<%- include('../includes/head.ejs') %>
+    <%- include('../includes/navigation_logout.ejs') %>
+
+
+    <div class="formulaire-equipement modify-user">
+        <form method="POST" action="/api/user/modify-user">
+    
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="name">Adresse</label>
+                    <div class="col-8">
+                        <input id="name" name="address" placeholder="Rue picard 1, 1180, Bruxelles" type="text" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="name">Numéro de téléphone</label>
+                    <div class="col-8">
+                        <input id="name" name="telephone" placeholder="+32484112233" pattern="+32[0-9]{9}" type="tel" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="name">Ancien password</label>
+                    <div class="col-8">
+                        <input id="name" name="old_password"  type="password" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="name">Nouveau password</label>
+                    <div class="col-8">
+                        <input id="name" name="password" placeholder="doit contenir minimum 1 chiffre et 6 caractères" type="password" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="name">Confirmation nouveau password</label>
+                    <div class="col-8">
+                        <input id="name" name="passwordConfirmation" placeholder="doit contenir minimum 1 chiffre et 6 caractères" type="password" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-4 col-8">
+                        <button name="submit" type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </div>
+    
+        </form>
+        <a href="/api/user/user-panel"><button type="button" class="btn btn-secondary retour">Retour</button></a>
+    </div>
+        <%- include('../includes/end.ejs') %>

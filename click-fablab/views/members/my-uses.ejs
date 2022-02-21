@@ -1,0 +1,28 @@
+<%- include('../includes/head.ejs') %>
+    <%- include('../includes/navigation_logout.ejs') %>
+
+    <div class="my-uses">
+        <h1>Utilisations</h1>
+        <table>
+            <thead>
+                <th>Durée en minute</th>
+                <th>Date</th>
+                <th>Nom de l'équipement reservé</th>
+                <th>Prix</th>
+            </thead>
+            <% for(var i=0; i < tabUse.length; i++) { %>
+               <tr>
+                 <td><%= tabUse[i].duration %></td>
+                 <td><%= tabUse[i].date %></td>
+                 <td><%= tabUse[i].equipment.name %></td>
+                 <td><%= tabUse[i].equipment.price %></td>
+               </tr>
+            <% } %>
+            </table>
+
+            
+        <a href="/api/user/user-panel"><button type="button" class="btn btn-secondary retour">Retour</button></a>
+    </div>
+
+
+    <%- include('../includes/end.ejs') %>
